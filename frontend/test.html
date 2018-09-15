@@ -1,0 +1,73 @@
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<link type="text/css" rel="stylesheet" href="jqcloud.css" />
+<!-- jQuery版本可能不同 請大家留意一下 -->
+<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="jqcloud-0.2.10.js"></script>
+<style type="text/css">
+	/* 當標籤被套上 r1 時就把它轉成垂直 */
+	div.jqcloud span.r1 {
+		-webkit-writing-mode: vertical-rl;
+		writing-mode: tb-rl;
+	}
+</style>
+<script type="text/javascript">
+	$(function(){
+		// input list 長這樣(json格式, 有詞, 權重, url或function)
+		var word_list = [
+			{text: "jQuery", weight: 13, url: "http://jquery.com"},
+			{text: "男丁格爾", weight: 11.5, url: "http://abgne.tw"},
+			{text: "Android", weight: 10, url: "www.android.com/"},
+			{text: "Dolor", weight: 9.4, url: "javascript:alert('JavaScript in URL is OK!');"},
+			{text: "Sit", weight: 8},
+			{text: "Amet", weight: 6.2},
+			{text: "Consectetur", weight: 5},
+			{text: "Adipiscing", weight: 5},
+			{text: "Elit", weight: 5},
+			{text: "Nam et", weight: 5},
+			{text: "Leo", weight: 4},
+			{text: "Sapien", weight: 4},
+			{text: "Pellentesque", weight: 3},
+			{text: "habitant", weight: 3},
+			{text: "morbi", weight: 3},
+			{text: "tristisque", weight: 3},
+			{text: "senectus", weight: 3},
+			{text: "et netus", weight: 3},
+			{text: "et malesuada", weight: 3},
+			{text: "fames", weight: 2},
+			{text: "ac turpis", weight: 2},
+			{text: "egestas", weight: 2},
+			{text: "Aenean", weight: 2},
+			{text: "vestibulum", weight: 2},
+			{text: "elit", weight: 2},
+			{text: "sit amet", weight: 2},
+			{text: "metus", weight: 2},
+			{text: "adipiscing", weight: 2},
+			{text: "ut ultrices", weight: 2},
+			{text: "justo", weight: 1},
+			{text: "dictum", weight: 1},
+			{text: "Ut et leo", weight: 1},
+			{text: "metus", weight: 1},
+			{text: "at molestie", weight: 1},
+			{text: "purus", weight: 1},
+			{text: "Curabitur", weight: 1},
+			{text: "diam", weight: 1},
+			{text: "dui", weight: 1},
+			{text: "ullamcorper", weight: 1},
+			{text: "id vuluptate ut", weight: 1},
+			{text: "mattis", weight: 1},
+			{text: "et nulla", weight: 1},
+			{text: "Sed", weight: 1}
+		];
+ 
+		// 套用標籤雲並延遲載入標籤
+		// 同時隨機幫每一個標籤加上 r1, r2, r3 的 className
+		$("#my_favorite_latin_words").jQCloud(word_list, {
+			delayedMode: true, 
+			randomClasses: 3
+		});
+	});
+</script>
+ 
+<body>
+	<div id="my_favorite_latin_words" style="width: 550px; height: 350px; border: 1px solid #ccc;"></div>
+</body>
